@@ -266,8 +266,6 @@ int main()
 	int Menu_Open; //主菜单选择
 	int Menu_Name; //姓名菜单玩家选择
 	int Menu_Old;  //年龄菜单玩家选择
-	int Menu_Attribute; //玩家选择设定属性
-	int Menu_Player_Attribute; //属性菜单玩家选择
 	//程序开始运行
 	cout << "欢迎使用本跑团软件,软件开发全程由[灵劫]独自制作." << endl;
 	cout << "版权>>>>>[灵劫]<<<<<持有全部." << endl;
