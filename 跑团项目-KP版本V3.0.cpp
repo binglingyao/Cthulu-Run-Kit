@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <windows.h>
 #include <stdlib.h>
 #include <cmath>
@@ -265,6 +265,9 @@ int main()
 	//菜单定义
 	int Menu_Open; //主菜单选择
 	int Menu_Name; //姓名菜单玩家选择
+	int Menu_Old;  //年龄菜单玩家选择
+	int Menu_Attribute; //玩家选择设定属性
+	int Menu_Player_Attribute; //属性菜单玩家选择
 	//程序开始运行
 	cout << "欢迎使用本跑团软件,软件开发全程由[灵劫]独自制作." << endl;
 	cout << "版权>>>>>[灵劫]<<<<<持有全部." << endl;
@@ -653,6 +656,7 @@ L1:
 	{
 
 	}
+	//菜单
 	cout << "菜单列表: " << endl;
 	cout << "1.玩家姓名菜单." << endl;
 	cout << "2.玩家年龄菜单." << endl;
@@ -663,6 +667,7 @@ L1:
 	cout << "7.玩家履历菜单." << endl;
 	cout << "8.玩家血量菜单." << endl;
 	cout << "9.玩家理智菜单." << endl;
+	cout << "10.内置骰子." << endl;
 	cout << "输入栏: ";
 	cin >> Menu_Open;
 	switch (Menu_Open)
@@ -700,7 +705,7 @@ L1:
 			cin >> Menu_Name;
 			switch (Menu_Name)
 			{
-			//选择为1号玩家设定姓名
+				//选择为1号玩家设定姓名
 			case 1:
 				system("cls");
 				cout << "您选择为1号玩家设定姓名." << endl;
@@ -708,7 +713,7 @@ L1:
 				cout << "输入栏: ";
 				cin >> Name_1;
 				break;
-			//选择为2号玩家设定姓名
+				//选择为2号玩家设定姓名
 			case 2:
 				system("cls");
 				cout << "您选择为2号玩家设定姓名." << endl;
@@ -933,6 +938,270 @@ L1:
 			}
 		}
 		//玩家姓名菜单结束
+		break;
+	//玩家年龄菜单
+	case 2:
+		//非KP玩家
+		if (Kp_Off == 0)
+		{
+			system("cls");
+			cout << "启动玩家年龄菜单模块." << endl;
+			cout << "请设定玩家年龄." << endl;
+			cout << "输入栏: ";
+			cin >> Player_Old_1;
+		}
+		//是KP玩家1
+		else if (Kp_Off == 1 && Player_List == 1)
+		{
+			system("cls");
+			cout << "启动玩家年龄菜单模块." << endl;
+			cout << "请设定玩家年龄." << endl;
+			cout << "输入栏: ";
+			cin >> Player_Old_1;
+		}
+		//是KP玩家2
+		else if (Kp_Off == 1 && Player_List == 2)
+		{
+			system("cls");
+			cout << "启动玩家年龄菜单模块." << endl;
+			cout << "检测到多名玩家." << endl;
+			cout << "请选择为几号玩家设定年龄?" << endl;
+			cout << "1.选择1号玩家." << endl;
+			cout << "2.选择2号玩家." << endl;
+			cout << "输入栏: ";
+			cin >> Menu_Old;
+			switch (Menu_Old)
+			{
+			//为1号玩家设定年龄
+			case 1:
+				system("cls");
+				cout << "您选择为1号玩家设定年龄." << endl;
+				cout << "请输入1号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_1;
+				break;
+			//为2号玩家设定年龄
+			case 2:
+				system("cls");
+				cout << "您选择为2号玩家设定年龄." << endl;
+				cout << "请输入2号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_2;
+				break;
+			}
+		}
+		//是KP玩家3
+		else if (Kp_Off == 1 && Player_List == 3)
+		{
+			system("cls");
+			cout << "启动玩家年龄菜单模块." << endl;
+			cout << "检测到多名玩家." << endl;
+			cout << "请选择为几号玩家设定年龄?" << endl;
+			cout << "1.选择1号玩家." << endl;
+			cout << "2.选择2号玩家." << endl;
+			cout << "3.选择3号玩家." << endl;
+			cout << "输入栏: ";
+			cin >> Menu_Old;
+			switch (Menu_Old)
+			{
+				//为1号玩家设定年龄
+			case 1:
+				system("cls");
+				cout << "您选择为1号玩家设定年龄." << endl;
+				cout << "请输入1号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_1;
+				break;
+				//为2号玩家设定年龄
+			case 2:
+				system("cls");
+				cout << "您选择为2号玩家设定年龄." << endl;
+				cout << "请输入2号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_2;
+				break;
+				//为3号玩家设定年龄
+			case 3:
+				system("cls");
+				cout << "您选择为3号玩家设定年龄." << endl;
+				cout << "请输入3号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_3;
+				break;
+			}
+		}
+		//是KP玩家4
+		else if (Kp_Off == 1 && Player_List == 4)
+		{
+			system("cls");
+			cout << "启动玩家年龄菜单模块." << endl;
+			cout << "检测到多名玩家." << endl;
+			cout << "请选择为几号玩家设定年龄?" << endl;
+			cout << "1.选择1号玩家." << endl;
+			cout << "2.选择2号玩家." << endl;
+			cout << "3.选择3号玩家." << endl;
+			cout << "4.选择4号玩家." << endl;
+			cout << "输入栏: ";
+			cin >> Menu_Old;
+			switch (Menu_Old)
+			{
+				//为1号玩家设定年龄
+			case 1:
+				system("cls");
+				cout << "您选择为1号玩家设定年龄." << endl;
+				cout << "请输入1号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_1;
+				break;
+				//为2号玩家设定年龄
+			case 2:
+				system("cls");
+				cout << "您选择为2号玩家设定年龄." << endl;
+				cout << "请输入2号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_2;
+				break;
+				//为3号玩家设定年龄
+			case 3:
+				system("cls");
+				cout << "您选择为3号玩家设定年龄." << endl;
+				cout << "请输入3号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_3;
+				break;
+				//为4号玩家设定年龄
+			case 4:
+				system("cls");
+				cout << "您选择为4号玩家设定年龄." << endl;
+				cout << "请输入4号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_4;
+				break;
+			}
+		}
+		//是KP玩家5
+		else if (Kp_Off == 1 && Player_List == 5)
+		{
+			system("cls");
+			cout << "启动玩家年龄菜单模块." << endl;
+			cout << "检测到多名玩家." << endl;
+			cout << "请选择为几号玩家设定年龄?" << endl;
+			cout << "1.选择1号玩家." << endl;
+			cout << "2.选择2号玩家." << endl;
+			cout << "3.选择3号玩家." << endl;
+			cout << "4.选择4号玩家." << endl;
+			cout << "5.选择5号玩家." << endl;
+			cout << "输入栏: ";
+			cin >> Menu_Old;
+			switch (Menu_Old)
+			{
+				//为1号玩家设定年龄
+			case 1:
+				system("cls");
+				cout << "您选择为1号玩家设定年龄." << endl;
+				cout << "请输入1号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_1;
+				break;
+				//为2号玩家设定年龄
+			case 2:
+				system("cls");
+				cout << "您选择为2号玩家设定年龄." << endl;
+				cout << "请输入2号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_2;
+				break;
+				//为3号玩家设定年龄
+			case 3:
+				system("cls");
+				cout << "您选择为3号玩家设定年龄." << endl;
+				cout << "请输入3号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_3;
+				break;
+				//为4号玩家设定年龄
+			case 4:
+				system("cls");
+				cout << "您选择为4号玩家设定年龄." << endl;
+				cout << "请输入4号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_4;
+				break;
+			case 5:
+				system("cls");
+				cout << "您选择为5号玩家设定年龄." << endl;
+				cout << "请输入5号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_5;
+				break;
+			}
+		}
+		//是KP玩家6
+		else if (Kp_Off == 1 && Player_List == 6)
+		{
+			system("cls");
+			cout << "启动玩家年龄菜单模块." << endl;
+			cout << "检测到多名玩家." << endl;
+			cout << "请选择为几号玩家设定年龄?" << endl;
+			cout << "1.选择1号玩家." << endl;
+			cout << "2.选择2号玩家." << endl;
+			cout << "3.选择3号玩家." << endl;
+			cout << "4.选择4号玩家." << endl;
+			cout << "5.选择5号玩家." << endl;
+			cout << "6.选择6号玩家." << endl;
+			cout << "输入栏: ";
+			cin >> Menu_Old;
+			switch (Menu_Old)
+			{
+				//为1号玩家设定年龄
+			case 1:
+				system("cls");
+				cout << "您选择为1号玩家设定年龄." << endl;
+				cout << "请输入1号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_1;
+				break;
+				//为2号玩家设定年龄
+			case 2:
+				system("cls");
+				cout << "您选择为2号玩家设定年龄." << endl;
+				cout << "请输入2号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_2;
+				break;
+				//为3号玩家设定年龄
+			case 3:
+				system("cls");
+				cout << "您选择为3号玩家设定年龄." << endl;
+				cout << "请输入3号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_3;
+				break;
+				//为4号玩家设定年龄
+			case 4:
+				system("cls");
+				cout << "您选择为4号玩家设定年龄." << endl;
+				cout << "请输入4号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_4;
+				break;
+			case 5:
+				system("cls");
+				cout << "您选择为5号玩家设定年龄." << endl;
+				cout << "请输入5号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_5;
+				break;
+			case 6:
+				system("cls");
+				cout << "您选择为6号玩家设定年龄." << endl;
+				cout << "请输入6号玩家的年龄." << endl;
+				cout << "输入栏: ";
+				cin >> Player_Old_6;
+				break;
+			}
+		}
+		//玩家年龄菜单结束
 		break;
 	}
 	system("cls");
